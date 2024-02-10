@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="ball"></div>
+
+    <div class="main">
+        <div class="nav">
+            <div class="nav-left">
+                <h1>Funzz</h1>
+            </div>
+            <div class="nav-right">
+                <a href="" class="hide-elem">Home</a>
+                <a href="" class="hide-elem">Artist</a>
+                <a href="" class="hide-elem">Playlist</a>
+                <a href="login.html" id="log" target="_blank" class="hide-elem"><ion-icon
+                        name="person-circle-outline"></ion-icon></a>
+                <ion-icon name="grid" onclick=showSidebar() class="menu"></ion-icon>
+            </div>
+            <div class="mobile-nav-right">
+                <ion-icon name="close" onclick=hideSidebar()></ion-icon>
+                <a href="">Home</a>
+                <a href="">Artist</a>
+                <a href="">Playlist</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    
+        <div class="top-artist">
+            <div class="title">
+                <h3>top artist</h3>
+                <div class="main-arrow">
+                    <ion-icon class="back" name="chevron-back-circle"></ion-icon>
+                    <ion-icon class="next" name="chevron-forward-circle"></ion-icon>
+                </div>
+            </div>
+    
+            <div class="card-wrapper">
+                <!-- <div class="card">
+                    <img src="./images/arijit singh.jpeg" alt="">
+                    <p>Arijit singh</p>
+                </div>
+    
+                <div class="card">
+                    <img src="./images/shreya ghosal.jpeg" alt="">
+                    <p>Shreya Ghosal</p>
+                </div>
+    
+                <div class="card">
+                    <img src="./images/nigam.jpeg" alt="">
+                    <p>Sonu Nigham</p>
+                </div>
+    
+                <div class="card">
+                    <img src="./images/shankar.jpg" alt="">
+                    <p>Shankar . M</p>
+                </div>
+    
+                <div class="card">
+                    <img src="./images/udit narayan.jpeg" alt="">
+                    <p>Udit Narayan</p>
+                </div>
+    
+                <div class="card">
+                    <img src="./images/kishor kumar.jpeg" alt="">
+                    <p>Kishor Kumar</p>
+                </div>
+    
+                <div class="card">
+                    <img src="./images/lata.jpeg" alt="">
+                    <p>Lata mangeshkar</p>
+                </div>
+    
+                <div class="card">
+                    <img src="./images/javed ali.jpg" alt="">
+                    <p>Javed Ali</p>
+                </div> -->
+            </div> 
+        </div>
+    
+        <div class="top-playlist">
+            <div class="title">
+                <h3>top Playlist</h3>
+                <div class="main-arrow">
+                    <ion-icon class="back-2" name="chevron-back-circle"></ion-icon>
+                    <ion-icon class="next-2" name="chevron-forward-circle"></ion-icon>
+                </div>
+            </div>
+    
+            <div class="card-container">
+                <div class="play-card">
+                    <img src="./images/gym.webp" alt="">
+                    <p>Beast Mode</p>
+                </div>
+    
+                <div class="play-card">
+                    <img src="./images/90's.jpeg" alt="">
+                    <p>90's hit</p>
+                </div>
+    
+                <div class="play-card">
+                    <img src="./images/romance.jpg" alt="">
+                    <p>Romance </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>
