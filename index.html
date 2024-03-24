@@ -4,129 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funzz</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MUSIC.ON</title>
+    <link rel="icon" type="image/x-icon" href="./images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="ball"></div>
-
     <div class="main">
-        <div class="nav">
-            <div class="nav-left">
-                <h1>Funzz</h1>
+        <div class="navbar">
+            <div class="nl">
+                <div class="logo">
+                    <h1>music.<span>on</span> </h1>
+                </div>
             </div>
-            <div class="nav-right">
-                <a href="" class="hide-elem">Home</a>
-                <a href="" class="hide-elem">Artist</a>
-                <a href="" class="hide-elem">Playlist</a>
-                <a href="login.html" id="log" target="_blank" class="hide-elem"><ion-icon
-                        name="person-circle-outline"></ion-icon></a>
-                <ion-icon name="grid" onclick=showSidebar() class="menu"></ion-icon>
+            <div class="nr">
+                <a href=""><button class="signin">Sign in</button></a>
+                <a href=""><button class="signup">Sign up</button></a>
+                <i class="ri-menu-line" id="menu" onclick="showSidebar()"></i>
             </div>
-            <div class="mobile-nav-right">
-                <ion-icon name="close" onclick=hideSidebar()></ion-icon>
-                <a href="">Home</a>
-                <a href="">Artist</a>
-                <a href="">Playlist</a>
-                <a href="login.html">Login</a>
+            <div class="mobile-view-sidebar">
+                <i class="ri-close-circle-line" onclick="hideSidebar()"></i>
+                <a href="">Sign in</a>
+                <a href="">Sign up</a>
             </div>
         </div>
-    
+
+        <div class="hero">
+            <img src="./images/cover-edited.jpg" alt="">
+        </div>
+        
         <div class="top-artist">
-            <div class="title">
-                <h3>top artist</h3>
-                <div class="main-arrow">
-                    <ion-icon class="back" name="chevron-back-circle"></ion-icon>
-                    <ion-icon class="next" name="chevron-forward-circle"></ion-icon>
-                </div>
+            <div class="top-heading">
             </div>
-    
-            <div class="card-wrapper">
-                <!-- <div class="card">
-                    <img src="./images/arijit singh.jpeg" alt="">
-                    <p>Arijit singh</p>
-                </div>
-    
-                <div class="card">
-                    <img src="./images/shreya ghosal.jpeg" alt="">
-                    <p>Shreya Ghosal</p>
-                </div>
-    
-                <div class="card">
-                    <img src="./images/nigam.jpeg" alt="">
-                    <p>Sonu Nigham</p>
-                </div>
-    
-                <div class="card">
-                    <img src="./images/shankar.jpg" alt="">
-                    <p>Shankar . M</p>
-                </div>
-    
-                <div class="card">
-                    <img src="./images/udit narayan.jpeg" alt="">
-                    <p>Udit Narayan</p>
-                </div>
-    
-                <div class="card">
-                    <img src="./images/kishor kumar.jpeg" alt="">
-                    <p>Kishor Kumar</p>
-                </div>
-    
-                <div class="card">
-                    <img src="./images/lata.jpeg" alt="">
-                    <p>Lata mangeshkar</p>
-                </div>
-    
-                <div class="card">
-                    <img src="./images/javed ali.jpg" alt="">
-                    <p>Javed Ali</p>
-                </div> -->
-            </div> 
+            <div class="artist-cards">
+                
+            </div>
         </div>
-    
+
         <div class="top-playlist">
-            <div class="title">
-                <h3>top Playlist</h3>
-                <div class="main-arrow">
-                    <ion-icon class="back-2" name="chevron-back-circle"></ion-icon>
-                    <ion-icon class="next-2" name="chevron-forward-circle"></ion-icon>
-                </div>
+            <div class="top-heading">
+
             </div>
-    
-            <div class="card-container">
-                <div class="play-card">
-                    <img src="./images/gym.webp" alt="">
-                    <p>Beast Mode</p>
-                </div>
-    
-                <div class="play-card">
-                    <img src="./images/90's.jpeg" alt="">
-                    <p>90's hit</p>
-                </div>
-    
-                <div class="play-card">
-                    <img src="./images/romance.jpg" alt="">
-                    <p>Romance </p>
-                </div>
+            <div class="playlist-card">
+
             </div>
+        </div>
+
+        <div class="suggested-song">
+            <div class="top-heading">
+                <h2>For you</h2>
+            </div>
+            <div class="ss-container">
+                <div class="ss-card">
+                    <div class="ss-l">
+                        <img src="./images/udit narayan.jpeg" alt="">
+                        <div class="ss-detail">
+                          <h2>Tum hi ho</h2>
+                          <p>Arijit Singh</p>
+                        </div>
+                    </div>
+                    <div class="ss-r">
+                        <h2>2:04</h2>
+                        <i class="ri-draggable"></i>
+                    </div>
+                </div>
+
+                <div class="ss-card">
+                    <div class="ss-l">
+                        <img src="./images/udit narayan.jpeg" alt="">
+                        <div class="ss-detail">
+                          <h2>Tum hi ho</h2>
+                          <p>Arijit Singh</p>
+                        </div>
+                    </div>
+                    <div class="ss-r">
+                        <h2>2:04</h2>
+                        <i class="ri-draggable"></i>
+                    </div>
+                </div>
+
+                <div class="ss-card">
+                    <div class="ss-l">
+                        <img src="./images/udit narayan.jpeg" alt="">
+                        <div class="ss-detail">
+                          <h2>Tum hi ho</h2>
+                          <p>Arijit Singh</p>
+                        </div>
+                    </div>
+                    <div class="ss-r">
+                        <h2>2:04</h2>
+                        <i class="ri-draggable"></i>
+                    </div>
+                </div>
+
+                <div class="ss-card">
+                    <div class="ss-l">
+                        <img src="./images/udit narayan.jpeg" alt="">
+                        <div class="ss-detail">
+                          <h2>Tum hi ho</h2>
+                          <p>Arijit Singh</p>
+                        </div>
+                    </div>
+                    <div class="ss-r">
+                        <h2>2:04</h2>
+                        <i class="ri-draggable"></i>
+                    </div>
+                </div>
+
+                <div class="ss-card">
+                    <div class="ss-l">
+                        <img src="./images/udit narayan.jpeg" alt="">
+                        <div class="ss-detail">
+                          <h2>Tum hi ho</h2>
+                          <p>Arijit Singh</p>
+                        </div>
+                    </div>
+                    <div class="ss-r">
+                        <h2>2:04</h2>
+                        <i class="ri-draggable"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+
         </div>
     </div>
+    
+    <div class="player-wrapper">
+        
+        <div class="player">
+            <div class="pl">
+                <img src="./images/arijit singh.jpeg" alt="">
+                <div class="ss-detail">
+                    <h2>Tum hi ho</h2>
+                    <p>Arijit Singh</p>
+                </div>
+            </div>
+            <div class="pm">
+                <div class="ctrl-btn">
+                    <h4><i class="ri-skip-back-fill"></i></h4>
+                    <h4><i class="ri-play-large-fill"></i></h4>
+                    <h4><i class="ri-skip-forward-fill"></i></h4>
+                </div>
+            </div>
+        </div>
+        
 
-    <script src="script.js"></script>
+    </div>
 
 </body>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </html>
