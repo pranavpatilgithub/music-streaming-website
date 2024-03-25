@@ -26,14 +26,15 @@
                 </div>
             </div>
             <div class="nr">
-                <a href=""><button class="signin">Sign in</button></a>
+                <a href="login.html"><button class="signin">Sign in</button></a>
                 <a href=""><button class="signup">Sign up</button></a>
                 <i class="ri-menu-line" id="menu" onclick="showSidebar()"></i>
             </div>
             <div class="mobile-view-sidebar">
                 <i class="ri-close-circle-line" onclick="hideSidebar()"></i>
-                <a href="">Sign in</a>
+                <a href="login.html">Sign in</a>
                 <a href="">Sign up</a>
+                <a href="">PLaylist</a>
             </div>
         </div>
 
@@ -62,82 +63,57 @@
             <div class="top-heading">
                 <h2>For you</h2>
             </div>
-            <div class="ss-container">
-                <div class="ss-card">
-                    <div class="ss-l">
-                        <img src="./images/udit narayan.jpeg" alt="">
-                        <div class="ss-detail">
-                          <h2>Tum hi ho</h2>
-                          <p>Arijit Singh</p>
-                        </div>
-                    </div>
-                    <div class="ss-r">
-                        <h2>2:04</h2>
-                        <i class="ri-draggable"></i>
-                    </div>
-                </div>
-
-                <div class="ss-card">
-                    <div class="ss-l">
-                        <img src="./images/udit narayan.jpeg" alt="">
-                        <div class="ss-detail">
-                          <h2>Tum hi ho</h2>
-                          <p>Arijit Singh</p>
-                        </div>
-                    </div>
-                    <div class="ss-r">
-                        <h2>2:04</h2>
-                        <i class="ri-draggable"></i>
-                    </div>
-                </div>
-
-                <div class="ss-card">
-                    <div class="ss-l">
-                        <img src="./images/udit narayan.jpeg" alt="">
-                        <div class="ss-detail">
-                          <h2>Tum hi ho</h2>
-                          <p>Arijit Singh</p>
-                        </div>
-                    </div>
-                    <div class="ss-r">
-                        <h2>2:04</h2>
-                        <i class="ri-draggable"></i>
-                    </div>
-                </div>
-
-                <div class="ss-card">
-                    <div class="ss-l">
-                        <img src="./images/udit narayan.jpeg" alt="">
-                        <div class="ss-detail">
-                          <h2>Tum hi ho</h2>
-                          <p>Arijit Singh</p>
-                        </div>
-                    </div>
-                    <div class="ss-r">
-                        <h2>2:04</h2>
-                        <i class="ri-draggable"></i>
-                    </div>
-                </div>
-
-                <div class="ss-card">
-                    <div class="ss-l">
-                        <img src="./images/udit narayan.jpeg" alt="">
-                        <div class="ss-detail">
-                          <h2>Tum hi ho</h2>
-                          <p>Arijit Singh</p>
-                        </div>
-                    </div>
-                    <div class="ss-r">
-                        <h2>2:04</h2>
-                        <i class="ri-draggable"></i>
-                    </div>
-                </div>
-
+            <div class="ss-container">                          
+                     
+                
             </div>
         </div>
 
         <div class="footer">
+            <div class="ft">
+                <div class="ftl">
+                    <div class="ftl-item">
+                        <div class="ftl-head">
+                            <h2>Company</h2>
+                        </div>
+                        <div class="ftl-list">
+                            <a href="">About</a>
+                            <a href="">Jobs</a>
+                            <a href="">For the record</a>
+                        </div>
+                    </div>
+                    <div class="ftl-item">
+                        <div class="ftl-head">
+                            <h2>Communities</h2>
+                        </div>
+                        <div class="ftl-list">
+                            <a href="">For Artists</a>
+                            <a href="">Developers</a>
+                            <a href="">Advertising</a>
+                            <a href="">Investors</a>
+                            <a href="">Vendors</a>
 
+                        </div>
+                    </div>
+                    <div class="ftl-item">
+                        <div class="ftl-head">
+                            <h2>Usefull Links</h2>
+                        </div>
+                        <div class="ftl-list">
+                            <a href="">Support</a>
+                            <a href="">Free mobile app</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ftr">
+                    <span><i class="ri-instagram-line"></i></span>
+                    <span><i class="ri-twitter-x-line"></i></span>
+                    <span><i class="ri-facebook-fill"></i></span>
+                </div>
+            </div>
+            <div class="fb">
+                <h4><i class="ri-copyright-line"></i>2024 music.<span>on</span></h4>
+            </div>
         </div>
     </div>
     
@@ -153,9 +129,9 @@
             </div>
             <div class="pm">
                 <div class="ctrl-btn">
-                    <h4><i class="ri-skip-back-fill"></i></h4>
-                    <h4><i class="ri-play-large-fill"></i></h4>
-                    <h4><i class="ri-skip-forward-fill"></i></h4>
+                    <h4 id="back"><i class="ri-skip-back-fill"></i></h4>
+                    <h4 id="play"><i class="ri-play-large-fill"></i></h4>
+                    <h4 id="next"><i class="ri-skip-forward-fill"></i></h4>
                 </div>
             </div>
         </div>
