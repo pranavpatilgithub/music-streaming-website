@@ -14,6 +14,7 @@ body {
     font-size: 12px;
     font-weight: 300;
     position: relative;
+    cursor: url(./images/mouse.png) , auto;
 }
 
 .main {
@@ -138,7 +139,10 @@ button[class=signup] {
     padding: 10px 0px;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
-
+.ss-card:hover{
+    background-color: #176b871a;
+    border-radius: 8px;
+}
 .ss-l {
     display: flex;
     align-items: center;
@@ -208,11 +212,74 @@ button[class=signup] {
     font-size: 18px;
     color: #4FBDBA;
 }
-.progrss-bar{
-    width: 100%;
-    height: 2px;
-    background-color: #176B87;
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1% 4%;
+    margin-top: 20px;
 }
+.ft{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #176B87;
+}
+.ftl{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
+}
+.ftl-head h2{
+    font-size: 18px;
+}
+.ftl-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ftl-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+.ftl-list a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+.ftl-list a:hover{
+    color: #4FBDBA;
+}
+.ftr{
+    display: flex;
+    gap: 10px;
+}
+.ftr span{
+    background-color: #176B87;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ftr span i{
+    font-size: 16px;
+}
+.fb{
+    padding: 30px 0;
+    padding-bottom: 80px;  
+    font-size: 16px; 
+}
+.fb h4 i, .fb h4 span{
+    color: #4FBDBA;
+}
+
 @media screen and (max-width:400px) {
     .nr a {
         display: none;
@@ -233,11 +300,20 @@ button[class=signup] {
     .ss-detail h2 {
         font-size: 15px;
     }
+    .ft{
+        flex-direction: column;
+    }
+    .ftl{
+        flex-wrap: wrap;
+    }
+    .ftr{
+        margin-top: 30px;
+    }
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
 
 /* Track */
