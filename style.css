@@ -1,108 +1,327 @@
-const sidebar = document.querySelector('.mobile-view-sidebar');
-function showSidebar() {
-    sidebar.style.display = "flex";
-}
-function hideSidebar() {
-    sidebar.style.display = "none";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-var arr = [
-    {songName : "Tum hi ho", url:"./music/tum hi ho.m4a", duration: "4:22", img: "./images/tum hi ho.jpg"},
-    {songName : "Saibo", url:"./music/saibo.m4a", duration: "3:17", img: "./images/saibo.jpg"},
-    {songName : "Chikni Chameli", url:"./music/chikni chameli.m4a", duration: "5:03", img: "./images/chikni chameli.jpg"},
-    {songName : "Khairiyat", url:"./music/khairiyat.m4a", duration: "4:40", img: "./images/khairiyat.jpg"},
-    {songName : "Raftaarein", url:"./music/raftaarein song.m4a", duration: "4:17", img: "./images/raftaarein song.jpeg"}
-]
-
-var audio = new Audio()
-var selectedSong = 0;
-var play = document.querySelector("#play");
-var back = document.querySelector("#back")
-var next = document.querySelector("#next")
-var flag = 0
-var playerPL = document.querySelector(".pl");
-
-function mainFunc() {
-    var clutter = ""
-
-    arr.forEach(function (elem, index) {
-        clutter += `
-        <div class="ss-card" id="${index}">
-                    <div class="ss-l">
-                        <img src="${elem.img}" alt="">
-                        <div class="ss-detail">
-                          <h2>${elem.songName}</h2>
-                          <p>Arijit Singh</p>
-                        </div>
-                    </div>
-                    <div class="ss-r">
-                        <h2>${elem.duration}</h2>
-                        <i class="ri-draggable"></i>
-                    </div>
-                </div>
-        `
-    })
-
-    document.querySelector(".ss-container").innerHTML = clutter;
-    audio.src = arr[selectedSong].url;
-    playerPL.innerHTML = `
-    <img src="${arr[selectedSong].img}" alt="">
-    <div class="ss-detail">
-        <h2>${arr[selectedSong].songName}</h2>
-        <p>Arijit Singh</p>
-    </div>`
+html,
+body {
+    width: 100%;
+    height: max-content;
+    background-color: #001C30;
+    color: white;
+    font-family: "Jura", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    position: relative;
+    cursor: url(./images/mouse.png) , auto;
 }
-mainFunc()
 
-document.querySelector(".ss-container").addEventListener("click", function (e) {
-    selectedSong = e.target.id
-    console.log(e.target.id)
-    mainFunc();
-    play.innerHTML = `<i class='ri-pause-large-fill'></i>`
-    flag = 1
-    audio.play()
-})
+.main {
+    width: 100%;
+    height: 100%;
+}
 
+.navbar {
+    width: 100%;
+    height: 60px;
+    padding: 1% 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.nl .logo h1 span {
+    color: #4FBDBA;
+}
 
-play.addEventListener("click",function(){
-    if(flag == 0){
-        play.innerHTML = `<i class='ri-pause-large-fill'></i>`
-        mainFunc()
-        audio.play()
-        flag = 1
+.nr {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nr a {
+    text-decoration: none;
+}
+
+.nr i {
+    display: none;
+}
+
+.nr button {
+    font-size: 15px;
+    background-color: #001C30;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: "Jura", sans-serif;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button[class=signup] {
+    background-color: #176B87;
+    border-radius: 4px;
+    color: black;
+    font-weight: 800;
+}
+
+.mobile-view-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 2% 4%;
+    display: none;
+    align-items: flex-start;
+    justify-content: space-around;
+    border: 1px solid #176B87;
+    border-top: none;
+    border-right: none;
+    border-radius: 8px;
+    flex-direction: column;
+    width: 120px;
+    height: 150px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.mobile-view-sidebar i {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.mobile-view-sidebar a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.hero {
+    width: 100%;
+    height: max-content;
+    padding: 1% 4%;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.top-heading h2 {
+    font-size: 18px;
+}
+
+.suggested-song {
+    padding: 1% 4%;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.ss-container {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ss-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+.ss-card:hover{
+    background-color: #176b871a;
+    border-radius: 8px;
+}
+.ss-l {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.ss-l img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.ss-r {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.ss-r h2 {
+    font-size: 16px;
+}
+
+.ss-r i {
+    font-size: 18px;
+}
+.player-wrapper{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1% 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.player{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; 
+    background-color: #172f4184;
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+    border-bottom: 2px solid #176B87;
+}
+.pl{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.pl img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.pm .ctrl-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 18px;
+    color: #4FBDBA;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1% 4%;
+    margin-top: 20px;
+}
+.ft{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #176B87;
+}
+.ftl{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
+}
+.ftl-head h2{
+    font-size: 18px;
+}
+.ftl-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ftl-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+.ftl-list a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+.ftl-list a:hover{
+    color: #4FBDBA;
+}
+.ftr{
+    display: flex;
+    gap: 10px;
+}
+.ftr span{
+    background-color: #176B87;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ftr span i{
+    font-size: 16px;
+}
+.fb{
+    padding: 30px 0;
+    padding-bottom: 80px;  
+    font-size: 16px; 
+}
+.fb h4 i, .fb h4 span{
+    color: #4FBDBA;
+}
+
+@media screen and (max-width:400px) {
+    .nr a {
+        display: none;
     }
-    else{
-        play.innerHTML = `<i class='ri-play-large-fill'></i>`
-        mainFunc()
-        audio.pause()
-        flag = 0
-    }
-})
 
-next.addEventListener("click" , function(){
-    if(selectedSong < arr.length -1){
-        selectedSong++
-        mainFunc()
-        audio.play()
-        back.style.opacity = 1
+    #menu {
+        display: block;
     }
-    else{
-        next.style.opacity = 0
-        
-    }
-})
 
-back.addEventListener("click" , function(){
-    if(selectedSong > 0 ){
-        selectedSong--
-        mainFunc()
-        audio.play()
-        next.style.opacity = 1
+    .hero img {
+        height: 130px;
     }
-    else{
-        back.style.opacity = 0
-        
-    }
-})
 
+    .ss-r h2 {
+        font-size: 12px;
+    }
+
+    .ss-detail h2 {
+        font-size: 15px;
+    }
+    .ft{
+        flex-direction: column;
+    }
+    .ftl{
+        flex-wrap: wrap;
+    }
+    .ftr{
+        margin-top: 30px;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #176B87;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #4FBDBA;
+}
